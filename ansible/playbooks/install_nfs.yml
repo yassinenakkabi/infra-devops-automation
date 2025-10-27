@@ -1,0 +1,41 @@
+---
+- name: 🧱 Installation et configuration du serveur NFS
+  hosts: nfs_group
+  become: yes
+  tasks:
+
+    - name: 📦 Installer le serveur NFS
+      apt:
+        name: nfs-kernel-server
+        state: present
+        update_cache: yes
+
+    - name: 📂 Créer le répertoire de partage NFS
+      file:
+        path: /srv/nfs/k3s-volumes
+        state: directory
+        owner: nobody
+        group: nogroup
+        mode: '0777'
+
+    - name: ⚙️ Configurer le partage dans /etc/exports
+      blockinfile:
+        path: /etc/exports
+        create: yes
+        block: |
+          /srv/nfs/k3s-volumes *(rw,sync,no_subtree_check,no_root_squash)
+
+    - name: 🔁 Redémarrer le service NFS
+      systemd:
+        name: nfs-kernel-server
+        enabled: yes
+        state: restarted
+
+    - name: 🧩 Vérifier les exports actifs
+      command: exportfs -v
+      register: exports_result
+
+    - name: 📜 Afficher les exports actifs
+      debug:
+        var: exports_result.stdout
+

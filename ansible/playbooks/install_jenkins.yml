@@ -1,0 +1,32 @@
+---
+- name: 🧩 Installer Jenkins sur la VM CICD
+  hosts: cicd_group
+  become: yes
+  tasks:
+    - name: 📦 Mettre à jour les paquets
+      apt:
+        update_cache: yes
+        upgrade: yes
+
+    - name: 🧰 Ajouter l'utilisateur vagrant au groupe docker
+      user:
+        name: vagrant
+        groups: docker
+        append: yes
+
+    - name: ▶️ Activer et démarrer Docker
+      systemd:
+        name: docker
+        enabled: yes
+        state: started
+
+    - name: 🚀 Démarrer Jenkins via Docker
+      shell: |
+        docker run -d \
+          --name jenkins \
+          -p 8080:8080 -p 50000:50000 \
+          -v jenkins_home:/var/jenkins_home \
+          jenkins/jenkins:lts-jdk17
+      args:
+        creates: /var/lib/docker/volumes/jenkins_home
+

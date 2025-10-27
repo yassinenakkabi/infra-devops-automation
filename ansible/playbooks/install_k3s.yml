@@ -1,0 +1,68 @@
+---
+- name: 🚀 Installation de K3s Master sur le noeud Control
+  hosts: control_group
+  become: yes
+  vars:
+    k3s_ip: "192.168.56.1"  # IP fixe du master (Vagrantfile)
+  tasks:
+    - name: 📥 Télécharger le script d'installation de K3s
+      get_url:
+        url: https://get.k3s.io
+        dest: /tmp/install_k3s.sh
+        mode: '0755'
+
+    - name: ⚙️ Installer K3s (Master)
+      shell: |
+        INSTALL_K3S_EXEC="server --cluster-init --write-kubeconfig-mode 644" /tmp/install_k3s.sh
+      args:
+        creates: /usr/local/bin/k3s
+
+    - name: 🧾 Récupérer le token d’enregistrement des workers
+      shell: cat /var/lib/rancher/k3s/server/node-token
+      register: node_token
+
+    - name: 💾 Sauvegarder le token pour les autres hôtes
+      set_fact:
+        k3s_token: "{{ node_token.stdout }}"
+
+    - name: 💾 Sauvegarder l’adresse IP du master
+      set_fact:
+        k3s_master_ip: "{{ k3s_ip }}"
+
+    - name: 🔍 Afficher les infos du master
+      debug:
+        msg: "Master IP : {{ k3s_master_ip }} | Token : {{ k3s_token }}"
+
+    - name: 🛠️ Configurer kubeconfig pour l'utilisateur vagrant (permanent)
+      shell: |
+        mkdir -p /home/vagrant/.kube
+        cp /etc/rancher/k3s/k3s.yaml /home/vagrant/.kube/config
+        chmod 644 /etc/rancher/k3s/k3s.yaml
+        chown vagrant:vagrant /home/vagrant/.kube/config
+        chmod 644 /home/vagrant/.kube/config
+        if ! grep -q "KUBECONFIG" /home/vagrant/.bashrc; then
+          echo 'export KUBECONFIG=$HOME/.kube/config' >> /home/vagrant/.bashrc
+        fi
+      args:
+        warn: false
+
+
+- name: 🧩 Installation de K3s sur les noeuds Workers
+  hosts: workers
+  become: yes
+  vars:
+    k3s_master_ip: "{{ hostvars['control']['k3s_master_ip'] }}"
+    k3s_token: "{{ hostvars['control']['k3s_token'] }}"
+  tasks:
+    - name: 📥 Télécharger le script d'installation de K3s
+      get_url:
+        url: https://get.k3s.io
+        dest: /tmp/install_k3s.sh
+        mode: '0755'
+
+    - name: 🚀 Installer K3s Agent et rejoindre le cluster
+      shell: |
+        K3S_URL=https://{{ k3s_master_ip }}:6443 K3S_TOKEN={{ k3s_token }} /tmp/install_k3s.sh
+      args:
+        creates: /usr/local/bin/k3s-agent
+

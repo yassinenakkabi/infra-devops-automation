@@ -1,0 +1,33 @@
+---
+- name: 🔗 Join nodes to the K3s cluster
+  hosts: workers, monitoring_group, cicd_group, argocd_group, nfs_group
+  become: yes
+  vars:
+    k3s_master_ip: "192.168.56.1"
+    k3s_token: "K104feb36800056d6137c307b1ecc56290e43c76ae5e2cf24f9a668721dd081f598::server:51cbefdfeea8b577bb798b9c067fbeb9"
+
+  tasks:
+    - name: 🔍 Vérifier si K3s est déjà installé et fonctionnel
+      shell: |
+        systemctl is-active k3s-agent 2>/dev/null || echo "inactive"
+      register: k3s_status
+      changed_when: false
+      ignore_errors: true
+
+    - name: 🧹 Supprimer l'ancienne installation K3s seulement si nécessaire
+      shell: |
+        /usr/local/bin/k3s-killall.sh 2>/dev/null || true
+        /usr/local/bin/k3s-agent-uninstall.sh 2>/dev/null || true
+      when: 
+        - k3s_status.stdout != "active"
+        - k3s_status.rc != 0
+
+    - name: 🚀 Installer K3s agent et rejoindre le cluster
+      shell: |
+        curl -sfL https://get.k3s.io | \
+        K3S_URL=https://{{ k3s_master_ip }}:6443 \
+        K3S_TOKEN="{{ k3s_token }}" \
+        INSTALL_K3S_EXEC="agent --flannel-iface=enp0s8 --node-ip={{ ansible_host }}" sh -
+      args:
+        creates: /usr/local/bin/k3s
+      when: k3s_status.stdout != "active"

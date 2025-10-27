@@ -1,0 +1,902 @@
+2025-10-26 16:47:56,226 p=9759 u=vagrant n=ansible | [WARNING]: Unable to parse /home/vagrant/ansible/inventory/inventory.yml as an inventory source
+
+2025-10-26 16:47:56,228 p=9759 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-10-26 16:47:56,239 p=9759 u=vagrant n=ansible | @all:
+  |--@ungrouped:
+2025-10-26 16:49:48,807 p=9769 u=vagrant n=ansible | @all:
+  |--@argocd_group:
+  |  |--argocd
+  |--@cicd_group:
+  |  |--cicd
+  |--@control_group:
+  |  |--control
+  |--@monitoring_group:
+  |  |--monitoring
+  |--@nfs_group:
+  |  |--nfs
+  |--@servers:
+  |  |--server-1
+  |  |--server-2
+  |--@ungrouped:
+  |--@workers:
+  |  |--worker-1
+  |  |--worker-2
+2025-10-26 16:49:57,664 p=9771 u=vagrant n=ansible | control | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0777 for '/vagrant/.vagrant/machines/control/virtualbox/private_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/vagrant/.vagrant/machines/control/virtualbox/private_key\": bad permissions\r\nvagrant@192.168.56.1: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:49:58,053 p=9771 u=vagrant n=ansible | server-2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0777 for '/vagrant/.vagrant/machines/server-2/virtualbox/private_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/vagrant/.vagrant/machines/server-2/virtualbox/private_key\": bad permissions\r\nvagrant@192.168.56.3: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:49:58,499 p=9771 u=vagrant n=ansible | worker-1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0777 for '/vagrant/.vagrant/machines/worker-1/virtualbox/private_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/vagrant/.vagrant/machines/worker-1/virtualbox/private_key\": bad permissions\r\nvagrant@192.168.56.4: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:49:58,518 p=9771 u=vagrant n=ansible | server-1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0777 for '/vagrant/.vagrant/machines/server-1/virtualbox/private_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/vagrant/.vagrant/machines/server-1/virtualbox/private_key\": bad permissions\r\nvagrant@192.168.56.2: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:49:58,542 p=9771 u=vagrant n=ansible | cicd | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0777 for '/vagrant/.vagrant/machines/cicd/virtualbox/private_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/vagrant/.vagrant/machines/cicd/virtualbox/private_key\": bad permissions\r\nvagrant@192.168.56.6: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:49:58,590 p=9771 u=vagrant n=ansible | worker-2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0777 for '/vagrant/.vagrant/machines/worker-2/virtualbox/private_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/vagrant/.vagrant/machines/worker-2/virtualbox/private_key\": bad permissions\r\nvagrant@192.168.56.5: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:49:58,701 p=9771 u=vagrant n=ansible | nfs | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0777 for '/vagrant/.vagrant/machines/nfs/virtualbox/private_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/vagrant/.vagrant/machines/nfs/virtualbox/private_key\": bad permissions\r\nvagrant@192.168.56.8: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:49:58,729 p=9771 u=vagrant n=ansible | monitoring | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0777 for '/vagrant/.vagrant/machines/monitoring/virtualbox/private_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/vagrant/.vagrant/machines/monitoring/virtualbox/private_key\": bad permissions\r\nvagrant@192.168.56.7: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:49:58,920 p=9771 u=vagrant n=ansible | argocd | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nPermissions 0777 for '/vagrant/.vagrant/machines/argocd/virtualbox/private_key' are too open.\r\nIt is required that your private key files are NOT accessible by others.\r\nThis private key will be ignored.\r\nLoad key \"/vagrant/.vagrant/machines/argocd/virtualbox/private_key\": bad permissions\r\nvagrant@192.168.56.9: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:52:18,902 p=9835 u=vagrant n=ansible | control | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/vagrant/.ssh/vagrant_keys/control: No such file or directory\r\nvagrant@192.168.56.1: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:52:19,083 p=9835 u=vagrant n=ansible | server-1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/vagrant/.ssh/vagrant_keys/server-1: No such file or directory\r\nvagrant@192.168.56.2: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:52:19,156 p=9835 u=vagrant n=ansible | server-2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/vagrant/.ssh/vagrant_keys/server-2: No such file or directory\r\nvagrant@192.168.56.3: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:52:19,163 p=9835 u=vagrant n=ansible | worker-1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/vagrant/.ssh/vagrant_keys/worker-1: No such file or directory\r\nvagrant@192.168.56.4: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:52:19,276 p=9835 u=vagrant n=ansible | worker-2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/vagrant/.ssh/vagrant_keys/worker-2: No such file or directory\r\nvagrant@192.168.56.5: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:52:19,434 p=9835 u=vagrant n=ansible | cicd | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/vagrant/.ssh/vagrant_keys/cicd: No such file or directory\r\nvagrant@192.168.56.6: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:52:19,465 p=9835 u=vagrant n=ansible | monitoring | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/vagrant/.ssh/vagrant_keys/monitoring: No such file or directory\r\nvagrant@192.168.56.7: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:52:19,491 p=9835 u=vagrant n=ansible | nfs | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/vagrant/.ssh/vagrant_keys/nfs: No such file or directory\r\nvagrant@192.168.56.8: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:52:19,515 p=9835 u=vagrant n=ansible | argocd | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: no such identity: /home/vagrant/.ssh/vagrant_keys/argocd: No such file or directory\r\nvagrant@192.168.56.9: Permission denied (publickey).",
+    "unreachable": true
+}
+2025-10-26 16:54:28,695 p=9911 u=vagrant n=ansible | server-1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-26 16:54:29,534 p=9911 u=vagrant n=ansible | cicd | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-26 16:54:29,613 p=9911 u=vagrant n=ansible | server-2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-26 16:54:29,681 p=9911 u=vagrant n=ansible | control | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-26 16:54:29,736 p=9911 u=vagrant n=ansible | worker-2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-26 16:54:30,608 p=9911 u=vagrant n=ansible | nfs | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-26 16:54:30,693 p=9911 u=vagrant n=ansible | argocd | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-26 16:54:30,818 p=9911 u=vagrant n=ansible | monitoring | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-26 16:54:30,855 p=9911 u=vagrant n=ansible | worker-1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-26 17:07:58,880 p=10122 u=vagrant n=ansible | PLAY [Installation de Docker sur les machines concernées] **************************************************************************
+2025-10-26 17:07:58,917 p=10122 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 17:08:07,429 p=10122 u=vagrant n=ansible | ok: [server-2]
+2025-10-26 17:08:07,656 p=10122 u=vagrant n=ansible | ok: [server-1]
+2025-10-26 17:08:07,800 p=10122 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 17:08:08,101 p=10122 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 17:08:08,173 p=10122 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 17:08:08,228 p=10122 u=vagrant n=ansible | ok: [argocd]
+2025-10-26 17:08:08,274 p=10122 u=vagrant n=ansible | TASK [🧱 Mettre à jour les paquets] *************************************************************************************************
+2025-10-26 17:09:30,985 p=10122 u=vagrant n=ansible | changed: [server-2]
+2025-10-26 17:09:31,944 p=10122 u=vagrant n=ansible | changed: [server-1]
+2025-10-26 17:09:38,769 p=10122 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 17:09:39,192 p=10122 u=vagrant n=ansible | changed: [argocd]
+2025-10-26 17:09:44,362 p=10122 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 17:09:46,067 p=10122 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 17:09:46,092 p=10122 u=vagrant n=ansible | TASK [📦 Installer les dépendances nécessaires] *************************************************************************************
+2025-10-26 17:10:06,985 p=10122 u=vagrant n=ansible | changed: [server-1]
+2025-10-26 17:10:07,522 p=10122 u=vagrant n=ansible | changed: [server-2]
+2025-10-26 17:10:08,952 p=10122 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 17:10:09,031 p=10122 u=vagrant n=ansible | changed: [argocd]
+2025-10-26 17:10:09,093 p=10122 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 17:10:09,191 p=10122 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 17:10:09,220 p=10122 u=vagrant n=ansible | TASK [🔑 Ajouter la clé GPG officielle de Docker] ***********************************************************************************
+2025-10-26 17:10:11,993 p=10122 u=vagrant n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri
+is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2025-10-26 17:10:12,014 p=10122 u=vagrant n=ansible | changed: [argocd]
+2025-10-26 17:10:12,018 p=10122 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 17:10:12,020 p=10122 u=vagrant n=ansible | changed: [server-1]
+2025-10-26 17:10:12,031 p=10122 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 17:10:12,044 p=10122 u=vagrant n=ansible | changed: [server-2]
+2025-10-26 17:10:12,046 p=10122 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 17:10:12,066 p=10122 u=vagrant n=ansible | TASK [🧩 Ajouter le dépôt Docker] ***************************************************************************************************
+2025-10-26 17:10:13,715 p=10122 u=vagrant n=ansible | changed: [server-1]
+2025-10-26 17:10:14,022 p=10122 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 17:10:14,137 p=10122 u=vagrant n=ansible | changed: [server-2]
+2025-10-26 17:10:14,147 p=10122 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 17:10:14,230 p=10122 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 17:10:14,293 p=10122 u=vagrant n=ansible | changed: [argocd]
+2025-10-26 17:10:14,312 p=10122 u=vagrant n=ansible | TASK [🚀 Installer Docker Engine et ses composants] *********************************************************************************
+2025-10-26 17:13:04,505 p=10122 u=vagrant n=ansible | changed: [server-2]
+2025-10-26 17:13:23,545 p=10122 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 17:13:35,746 p=10122 u=vagrant n=ansible | changed: [server-1]
+2025-10-26 17:13:36,173 p=10122 u=vagrant n=ansible | changed: [argocd]
+2025-10-26 17:13:38,373 p=10122 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 17:13:43,492 p=10122 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 17:13:43,510 p=10122 u=vagrant n=ansible | TASK [🔁 Activer et démarrer Docker] ************************************************************************************************
+2025-10-26 17:13:47,214 p=10122 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 17:13:47,238 p=10122 u=vagrant n=ansible | ok: [argocd]
+2025-10-26 17:13:47,324 p=10122 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 17:13:47,328 p=10122 u=vagrant n=ansible | ok: [server-1]
+2025-10-26 17:13:47,341 p=10122 u=vagrant n=ansible | ok: [server-2]
+2025-10-26 17:13:47,420 p=10122 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 17:13:47,448 p=10122 u=vagrant n=ansible | TASK [🧍 Ajouter l'utilisateur vagrant au groupe docker] ****************************************************************************
+2025-10-26 17:13:49,836 p=10122 u=vagrant n=ansible | changed: [server-1]
+2025-10-26 17:13:49,951 p=10122 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 17:13:50,106 p=10122 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 17:13:50,113 p=10122 u=vagrant n=ansible | changed: [argocd]
+2025-10-26 17:13:50,175 p=10122 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 17:13:50,202 p=10122 u=vagrant n=ansible | changed: [server-2]
+2025-10-26 17:13:50,224 p=10122 u=vagrant n=ansible | TASK [🧪 Vérifier l'installation de Docker] *****************************************************************************************
+2025-10-26 17:13:51,634 p=10122 u=vagrant n=ansible | changed: [server-1]
+2025-10-26 17:13:51,888 p=10122 u=vagrant n=ansible | changed: [server-2]
+2025-10-26 17:13:51,935 p=10122 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 17:13:52,066 p=10122 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 17:13:52,131 p=10122 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 17:13:52,265 p=10122 u=vagrant n=ansible | changed: [argocd]
+2025-10-26 17:13:52,286 p=10122 u=vagrant n=ansible | TASK [✅ Afficher la version de Docker installée] ***********************************************************************************
+2025-10-26 17:13:52,498 p=10122 u=vagrant n=ansible | ok: [server-1] => {
+    "msg": "Version Docker installée sur server-1 : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 17:13:52,543 p=10122 u=vagrant n=ansible | ok: [worker-1] => {
+    "msg": "Version Docker installée sur worker-1 : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 17:13:52,598 p=10122 u=vagrant n=ansible | ok: [server-2] => {
+    "msg": "Version Docker installée sur server-2 : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 17:13:52,678 p=10122 u=vagrant n=ansible | ok: [worker-2] => {
+    "msg": "Version Docker installée sur worker-2 : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 17:13:52,736 p=10122 u=vagrant n=ansible | ok: [argocd] => {
+    "msg": "Version Docker installée sur argocd : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 17:13:52,742 p=10122 u=vagrant n=ansible | ok: [cicd] => {
+    "msg": "Version Docker installée sur cicd : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 17:13:52,791 p=10122 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2025-10-26 17:13:52,794 p=10122 u=vagrant n=ansible | argocd                     : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 17:13:52,795 p=10122 u=vagrant n=ansible | cicd                       : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 17:13:52,798 p=10122 u=vagrant n=ansible | server-1                   : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 17:13:52,801 p=10122 u=vagrant n=ansible | server-2                   : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 17:13:52,801 p=10122 u=vagrant n=ansible | worker-1                   : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 17:13:52,804 p=10122 u=vagrant n=ansible | worker-2                   : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 17:14:11,385 p=10642 u=vagrant n=ansible | worker-1 | CHANGED | rc=0 >>
+Docker version 28.5.1, build e180ab8
+
+2025-10-26 17:14:11,475 p=10642 u=vagrant n=ansible | server-1 | CHANGED | rc=0 >>
+Docker version 28.5.1, build e180ab8
+
+2025-10-26 17:14:11,622 p=10642 u=vagrant n=ansible | server-2 | CHANGED | rc=0 >>
+Docker version 28.5.1, build e180ab8
+
+2025-10-26 17:14:11,674 p=10642 u=vagrant n=ansible | cicd | CHANGED | rc=0 >>
+Docker version 28.5.1, build e180ab8
+
+2025-10-26 17:14:11,830 p=10642 u=vagrant n=ansible | worker-2 | CHANGED | rc=0 >>
+Docker version 28.5.1, build e180ab8
+
+2025-10-26 17:14:11,970 p=10642 u=vagrant n=ansible | argocd | CHANGED | rc=0 >>
+Docker version 28.5.1, build e180ab8
+
+2025-10-26 17:14:13,402 p=10642 u=vagrant n=ansible | control | FAILED | rc=2 >>
+[Errno 2] No such file or directory: b'docker'
+
+2025-10-26 17:14:13,463 p=10642 u=vagrant n=ansible | monitoring | FAILED | rc=2 >>
+[Errno 2] No such file or directory: b'docker'
+
+2025-10-26 17:14:13,598 p=10642 u=vagrant n=ansible | nfs | FAILED | rc=2 >>
+[Errno 2] No such file or directory: b'docker'
+
+2025-10-26 17:14:24,963 p=10848 u=vagrant n=ansible | [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2025-10-26 17:14:24,965 p=10848 u=vagrant n=ansible | worker-1 | FAILED | rc=4 >>
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2025-10-26 17:12:50 UTC; 1min 34s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 3870 (dockerd)
+      Tasks: 9
+     Memory: 21.4M
+        CPU: 7.877s
+     CGroup: /system.slice/docker.service
+             └─3870 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Oct 26 17:12:39 worker-1 dockerd[3870]: time="2025-10-26T17:12:39.547458564Z" level=info msg="detected 127.0.0.53 nameserver, assuming systemd-resolved, so using resolv.conf: /run/systemd/resolve/resolv.conf"
+Oct 26 17:12:40 worker-1 dockerd[3870]: time="2025-10-26T17:12:40.582316864Z" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Oct 26 17:12:41 worker-1 dockerd[3870]: time="2025-10-26T17:12:41.844894234Z" level=info msg="Loading containers: start."
+Oct 26 17:12:49 worker-1 dockerd[3870]: time="2025-10-26T17:12:49.755858917Z" level=info msg="Loading containers: done."
+Oct 26 17:12:49 worker-1 dockerd[3870]: time="2025-10-26T17:12:49.970129502Z" level=info msg="Docker daemon" commit=f8215cc containerd-snapshotter=false storage-driver=overlay2 version=28.5.1
+Oct 26 17:12:49 worker-1 dockerd[3870]: time="2025-10-26T17:12:49.971375949Z" level=info msg="Initializing buildkit"
+Oct 26 17:12:50 worker-1 dockerd[3870]: time="2025-10-26T17:12:50.535745506Z" level=info msg="Completed buildkit initialization"
+Oct 26 17:12:50 worker-1 dockerd[3870]: time="2025-10-26T17:12:50.555737460Z" level=info msg="Daemon has completed initialization"
+Oct 26 17:12:50 worker-1 dockerd[3870]: time="2025-10-26T17:12:50.555963687Z" level=info msg="API listen on /run/docker.sock"
+Oct 26 17:12:50 worker-1 systemd[1]: Started Docker Application Container Engine.Invalid unit name "|" escaped as "\x7c" (maybe you should use systemd-escape?).
+Unit \x7c.service could not be found.
+Unit grep.service could not be found.
+Unit Active.service could not be found.non-zero return code
+
+2025-10-26 17:14:24,968 p=10848 u=vagrant n=ansible | worker-2 | FAILED | rc=4 >>
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2025-10-26 17:13:15 UTC; 1min 9s ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 3900 (dockerd)
+      Tasks: 8
+     Memory: 21.1M
+        CPU: 4.702s
+     CGroup: /system.slice/docker.service
+             └─3900 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Oct 26 17:13:10 worker-2 dockerd[3900]: time="2025-10-26T17:13:10.260066338Z" level=info msg="detected 127.0.0.53 nameserver, assuming systemd-resolved, so using resolv.conf: /run/systemd/resolve/resolv.conf"
+Oct 26 17:13:10 worker-2 dockerd[3900]: time="2025-10-26T17:13:10.540171650Z" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
+Oct 26 17:13:10 worker-2 dockerd[3900]: time="2025-10-26T17:13:10.804672655Z" level=info msg="Loading containers: start."
+Oct 26 17:13:14 worker-2 dockerd[3900]: time="2025-10-26T17:13:14.663130087Z" level=info msg="Loading containers: done."
+Oct 26 17:13:14 worker-2 dockerd[3900]: time="2025-10-26T17:13:14.804750867Z" level=info msg="Docker daemon" commit=f8215cc containerd-snapshotter=false storage-driver=overlay2 version=28.5.1
+Oct 26 17:13:14 worker-2 dockerd[3900]: time="2025-10-26T17:13:14.806517757Z" level=info msg="Initializing buildkit"
+Oct 26 17:13:15 worker-2 dockerd[3900]: time="2025-10-26T17:13:15.185321141Z" level=info msg="Completed buildkit initialization"
+Oct 26 17:13:15 worker-2 dockerd[3900]: time="2025-10-26T17:13:15.239286509Z" level=info msg="Daemon has completed initialization"
+Oct 26 17:13:15 worker-2 dockerd[3900]: time="2025-10-26T17:13:15.239669558Z" level=info msg="API listen on /run/docker.sock"
+Oct 26 17:13:15 worker-2 systemd[1]: Started Docker Application Container Engine.Invalid unit name "|" escaped as "\x7c" (maybe you should use systemd-escape?).
+Unit \x7c.service could not be found.
+Unit grep.service could not be found.
+Unit Active.service could not be found.non-zero return code
+
+2025-10-26 17:15:58,314 p=10875 u=vagrant n=ansible | ERROR! the playbook: playbooks/install_k3s.yml could not be found
+2025-10-26 17:18:34,280 p=10888 u=vagrant n=ansible | PLAY [🚀 Installation de K3s Master sur le noeud Control] ***************************************************************************
+2025-10-26 17:18:34,313 p=10888 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 17:18:40,136 p=10888 u=vagrant n=ansible | ok: [control]
+2025-10-26 17:18:40,171 p=10888 u=vagrant n=ansible | TASK [📦 Télécharger et installer K3s (Master)] *************************************************************************************
+2025-10-26 17:30:47,030 p=10888 u=vagrant n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri
+is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2025-10-26 17:30:47,034 p=10888 u=vagrant n=ansible | changed: [control]
+2025-10-26 17:30:47,053 p=10888 u=vagrant n=ansible | TASK [🧾 Récupérer le token d’enregistrement des workers] ***************************************************************************
+2025-10-26 17:30:49,306 p=10888 u=vagrant n=ansible | changed: [control]
+2025-10-26 17:30:49,332 p=10888 u=vagrant n=ansible | TASK [💾 Sauvegarder le token pour les autres hôtes] ********************************************************************************
+2025-10-26 17:30:49,487 p=10888 u=vagrant n=ansible | ok: [control]
+2025-10-26 17:30:49,507 p=10888 u=vagrant n=ansible | TASK [🌐 Obtenir l’adresse IP du master] ********************************************************************************************
+2025-10-26 17:30:50,872 p=10888 u=vagrant n=ansible | changed: [control]
+2025-10-26 17:30:50,896 p=10888 u=vagrant n=ansible | TASK [💾 Sauvegarder l’adresse IP du master] ****************************************************************************************
+2025-10-26 17:30:51,264 p=10888 u=vagrant n=ansible | ok: [control]
+2025-10-26 17:30:51,290 p=10888 u=vagrant n=ansible | TASK [🔍 Afficher les infos du master] **********************************************************************************************
+2025-10-26 17:30:51,393 p=10888 u=vagrant n=ansible | ok: [control] => {
+    "msg": "Master IP : 10.0.2.15 | Token : K1040a10b71eff10b7da71838d0c76ec98302d61200f68b65992dc3e304ff61c25f::server:e71130032b28c29fa9a7835f77c570d8"
+}
+2025-10-26 17:30:51,440 p=10888 u=vagrant n=ansible | PLAY [🧩 Installation de K3s sur les noeuds Workers] ********************************************************************************
+2025-10-26 17:30:51,458 p=10888 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 17:30:56,567 p=10888 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 17:30:57,928 p=10888 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 17:30:57,974 p=10888 u=vagrant n=ansible | TASK [🚀 Installer K3s Agent et rejoindre le cluster] *******************************************************************************
+2025-10-26 18:00:03,585 p=10888 u=vagrant n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-26 18:00:09,402 p=15477 u=vagrant n=ansible | worker-1 | CHANGED | rc=0 >>
++ [ -s /etc/systemd/system/k3s-agent.service ]
++ basename /etc/systemd/system/k3s-agent.service
++ systemctl stop k3s-agent.service
++ [ -x /etc/init.d/k3s* ]
++ killtree
++ kill -9
++ do_unmount_and_remove /run/k3s
++ set +x
++ do_unmount_and_remove /var/lib/kubelet/pods
++ set +x
++ do_unmount_and_remove /var/lib/kubelet/plugins
++ set +x
++ do_unmount_and_remove /run/netns/cni-
++ set +x
++ ip netns show
++ xargs -r -t -n 1 ip netns delete
++ grep cni-
++ remove_interfaces
++ ip link show
++ read ignore iface ignore
++ grep master cni0
++ ip link delete cni0
+Cannot find device "cni0"
++ ip link delete flannel.1
+Cannot find device "flannel.1"
++ ip link delete flannel-v6.1
+Cannot find device "flannel-v6.1"
++ ip link delete kube-ipvs0
+Cannot find device "kube-ipvs0"
++ ip link delete flannel-wg
+Cannot find device "flannel-wg"
++ ip link delete flannel-wg-v6
+Cannot find device "flannel-wg-v6"
++ command -v tailscale
++ [ -n  ]
++ rm -rf /var/lib/cni/
++ iptables-save
++ iptables-restore
++ grep -iv flannel
++ grep -v CNI-
++ grep -v KUBE-
++ ip6tables-save
++ grep -iv flannel
++ grep -v CNI-
++ + grep -v KUBE-
+ip6tables-restore
+
+2025-10-26 18:00:09,500 p=15477 u=vagrant n=ansible | worker-2 | CHANGED | rc=0 >>
++ [ -s /etc/systemd/system/k3s-agent.service ]
++ basename /etc/systemd/system/k3s-agent.service
++ systemctl stop k3s-agent.service
++ [ -x /etc/init.d/k3s* ]
++ killtree
++ kill -9
++ do_unmount_and_remove /run/k3s
++ set +x
++ do_unmount_and_remove /var/lib/kubelet/pods
++ set +x
++ do_unmount_and_remove /var/lib/kubelet/plugins
++ set +x
++ do_unmount_and_remove /run/netns/cni-
++ set +x
++ ip netns show
++ xargs -r -t -n 1 ip netns delete
++ grep cni-
++ remove_interfaces
++ ip link+  showgrep master cni0
+
++ read ignore iface ignore
++ ip link delete cni0
+Cannot find device "cni0"
++ ip link delete flannel.1
+Cannot find device "flannel.1"
++ ip link delete flannel-v6.1
+Cannot find device "flannel-v6.1"
++ ip link delete kube-ipvs0
+Cannot find device "kube-ipvs0"
++ ip link delete flannel-wg
+Cannot find device "flannel-wg"
++ ip link delete flannel-wg-v6
+Cannot find device "flannel-wg-v6"
++ command -v tailscale
++ [ -n  ]
++ rm -rf /var/lib/cni/
++ iptables-save
++ iptables-restore
++ grep -iv flannel
++ grep -v CNI-
++ grep -v KUBE-
++ ip6tables-save
++ grep -iv flannel
++ grep -v CNI-
++ ip6tables-restore
++ grep -v KUBE-
+
+2025-10-26 18:00:19,455 p=15502 u=vagrant n=ansible | control | CHANGED | rc=0 >>
++ [ -s /etc/systemd/system/k3s.service ]
++ basename /etc/systemd/system/k3s.service
++ systemctl stop k3s.service
++ [ -x /etc/init.d/k3s* ]
++ killtree 12145 12159 12237 14352 14453
++ kill -9 12145 12254 12668 12159 12225 12594 12237 12331 15430 14352 14420 15000 14453 14502 14866 14911
++ do_unmount_and_remove /run/k3s
++ set +x
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/f9b9a0a05c0c8cb6cd93490f66341e488cdb4ed23a975cfec521f138e7b706be/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/f65a5fbdabeb4af5bb51832ceea1975a13c1994c2ab1d98c2696368cb447c67c/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/c4bf2be8ad5b12fad2d4b17d6db2729dc753bc77cd4e0dbca87eaba4bfb7c50e/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/c0b2d194ca8c4798a59f055e45ec60e1a045ca1ac0a48160e62533279b0b0d75/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/ba0513011436bc52b63d0065fd147f55e5df78a5d28613f4d4f44d993c30eec8/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/8ab3995c300d106e02667e6b66038f9cdaee854cc0175e7d64b657a6fafca51d/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/7fd0eac16061b47f18c8ce4a6dbf1d8eb09dace32a437a7a38807b45be0d8896/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/7af497c17dea384234461df7479c9346b2c32a4026c2ae07208541f35edccf6c/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/65007b1771735fa059a9c7f0c9f741cf7656dc55410537c6bc5c84dfe74ef730/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/5060bbcd6343d60b6e467282ed8275e107ee5bc703867dd943bb39f6dcb0e5fa/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/0b4caffa586796604bae128ad465997b09168a8a8e30431f3221a834f671841a/rootfs
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.grpc.v1.cri/sandboxes/f65a5fbdabeb4af5bb51832ceea1975a13c1994c2ab1d98c2696368cb447c67c/shm
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.grpc.v1.cri/sandboxes/ba0513011436bc52b63d0065fd147f55e5df78a5d28613f4d4f44d993c30eec8/shm
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.grpc.v1.cri/sandboxes/65007b1771735fa059a9c7f0c9f741cf7656dc55410537c6bc5c84dfe74ef730/shm
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.grpc.v1.cri/sandboxes/5060bbcd6343d60b6e467282ed8275e107ee5bc703867dd943bb39f6dcb0e5fa/shm
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/k3s/containerd/io.containerd.grpc.v1.cri/sandboxes/0b4caffa586796604bae128ad465997b09168a8a8e30431f3221a834f671841a/shm
++ do_unmount_and_remove /var/lib/kubelet/pods
++ set +x
+sh -c 'umount -f "$0" && rm -rf "$0"' /var/lib/kubelet/pods/d542983f-9f2d-4fa4-920c-075cadfb8e4d/volumes/kubernetes.io~projected/kube-api-access-gwgzq
+sh -c 'umount -f "$0" && rm -rf "$0"' /var/lib/kubelet/pods/6bbaea21-f804-41c3-aa07-da77ab450e06/volumes/kubernetes.io~projected/kube-api-access-7p8gl
+sh -c 'umount -f "$0" && rm -rf "$0"' /var/lib/kubelet/pods/5e408781-0179-4efc-9b87-3dd8b24a4b30/volumes/kubernetes.io~projected/kube-api-access-khqfv
+sh -c 'umount -f "$0" && rm -rf "$0"' /var/lib/kubelet/pods/28969c00-d2cd-4b82-a88e-f638bf66c231/volumes/kubernetes.io~projected/kube-api-access-mgdrs
++ do_unmount_and_remove /var/lib/kubelet/plugins
++ set +x
++ do_unmount_and_remove /run/netns/cni-
++ set +x
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/netns/cni-f14567ea-4278-f30e-47c7-5db561ebd765
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/netns/cni-d45028f1-e6c6-dddd-1fdc-5684ab4ea6b9
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/netns/cni-9e94c3a2-53f8-9a6e-92aa-137ca6f2a5c5
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/netns/cni-7a51dc80-c955-be0f-437d-dc7d77584430
+sh -c 'umount -f "$0" && rm -rf "$0"' /run/netns/cni-6094cff7-b92c-d844-ac59-b4750113a146
++ xargs -r -t -n 1 ip netns delete
++ ip netns show
++ grep cni-
++ remove_interfaces
++ grep master cni0
++ read ignore iface ignore
++ ip link show
++ ip link delete cni0
++ ip link delete flannel.1
++ ip link delete flannel-v6.1
+Cannot find device "flannel-v6.1"
++ ip link delete kube-ipvs0
+Cannot find device "kube-ipvs0"
++ ip link delete flannel-wg
+Cannot find device "flannel-wg"
++ ip link delete flannel-wg-v6
+Cannot find device "flannel-wg-v6"
++ command -v tailscale
++ [ -n  ]
++ rm -rf /var/lib/cni/
++ + grep -iv flannel
+iptables-save
++ iptables-restore
++ grep -v CNI-
++ grep -v KUBE-
++ ip6tables-save+ grep -iv flannel
+
++ grep -v CNI-
++ ip6tables-restore
++ grep -v KUBE-
+
+2025-10-26 18:00:24,805 p=15821 u=vagrant n=ansible | PLAY [🚀 Installation de K3s Master sur le noeud Control] ***************************************************************************
+2025-10-26 18:00:24,831 p=15821 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:00:28,116 p=15821 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:00:28,145 p=15821 u=vagrant n=ansible | TASK [📦 Télécharger et installer K3s (Master)] *************************************************************************************
+2025-10-26 18:00:29,432 p=15821 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:00:29,452 p=15821 u=vagrant n=ansible | TASK [🧾 Récupérer le token d’enregistrement des workers] ***************************************************************************
+2025-10-26 18:00:30,514 p=15821 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:00:30,532 p=15821 u=vagrant n=ansible | TASK [💾 Sauvegarder le token pour les autres hôtes] ********************************************************************************
+2025-10-26 18:00:30,603 p=15821 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:00:30,628 p=15821 u=vagrant n=ansible | TASK [🌐 Obtenir l’adresse IP du master] ********************************************************************************************
+2025-10-26 18:00:31,665 p=15821 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:00:31,684 p=15821 u=vagrant n=ansible | TASK [💾 Sauvegarder l’adresse IP du master] ****************************************************************************************
+2025-10-26 18:00:31,760 p=15821 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:00:31,781 p=15821 u=vagrant n=ansible | TASK [🔍 Afficher les infos du master] **********************************************************************************************
+2025-10-26 18:00:31,861 p=15821 u=vagrant n=ansible | ok: [control] => {
+    "msg": "Master IP : 10.0.2.15 | Token : K1040a10b71eff10b7da71838d0c76ec98302d61200f68b65992dc3e304ff61c25f::server:e71130032b28c29fa9a7835f77c570d8"
+}
+2025-10-26 18:00:31,909 p=15821 u=vagrant n=ansible | PLAY [🧩 Installation de K3s sur les noeuds Workers] ********************************************************************************
+2025-10-26 18:00:31,923 p=15821 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:00:34,726 p=15821 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 18:00:34,761 p=15821 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 18:00:34,791 p=15821 u=vagrant n=ansible | TASK [🚀 Installer K3s Agent et rejoindre le cluster] *******************************************************************************
+2025-10-26 18:00:43,029 p=15821 u=vagrant n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri
+is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2025-10-26 18:00:43,031 p=15821 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 18:00:43,827 p=15821 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 18:00:43,865 p=15821 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2025-10-26 18:00:43,865 p=15821 u=vagrant n=ansible | control                    : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:00:43,866 p=15821 u=vagrant n=ansible | worker-1                   : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:00:43,866 p=15821 u=vagrant n=ansible | worker-2                   : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:16:28,862 p=18556 u=vagrant n=ansible | PLAY [🚀 Installation de K3s Master sur le noeud Control] ***************************************************************************
+2025-10-26 18:16:28,880 p=18556 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:16:33,494 p=18556 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:16:33,524 p=18556 u=vagrant n=ansible | TASK [📦 Télécharger et installer K3s (Master)] *************************************************************************************
+2025-10-26 18:19:23,611 p=18556 u=vagrant n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri
+is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2025-10-26 18:19:23,622 p=18556 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:19:23,651 p=18556 u=vagrant n=ansible | TASK [🧾 Récupérer le token d’enregistrement des workers] ***************************************************************************
+2025-10-26 18:19:26,912 p=18556 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:19:26,940 p=18556 u=vagrant n=ansible | TASK [💾 Sauvegarder le token pour les autres hôtes] ********************************************************************************
+2025-10-26 18:19:27,064 p=18556 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:19:27,093 p=18556 u=vagrant n=ansible | TASK [🌐 Obtenir l’adresse IP du master] ********************************************************************************************
+2025-10-26 18:19:28,254 p=18556 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:19:28,269 p=18556 u=vagrant n=ansible | TASK [💾 Sauvegarder l’adresse IP du master] ****************************************************************************************
+2025-10-26 18:19:28,380 p=18556 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:19:28,401 p=18556 u=vagrant n=ansible | TASK [🔍 Afficher les infos du master] **********************************************************************************************
+2025-10-26 18:19:28,520 p=18556 u=vagrant n=ansible | ok: [control] => {
+    "msg": "Master IP : 10.0.2.15 | Token : K105108c75abd7cafeece843b130bdd52fce49c2f04f0c28b39deec873ddf0239eb::server:b8b86a5d2150f14d2e20316b6e2909a6"
+}
+2025-10-26 18:19:28,550 p=18556 u=vagrant n=ansible | PLAY [🧩 Installation de K3s sur les noeuds Workers] ********************************************************************************
+2025-10-26 18:19:28,561 p=18556 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:19:33,264 p=18556 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 18:19:33,492 p=18556 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 18:19:33,520 p=18556 u=vagrant n=ansible | TASK [🚀 Installer K3s Agent et rejoindre le cluster] *******************************************************************************
+2025-10-26 18:27:12,071 p=18556 u=vagrant n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-26 18:27:14,455 p=21668 u=vagrant n=ansible | PLAY [🚀 Installation de K3s Master sur le noeud Control] ***************************************************************************
+2025-10-26 18:27:14,482 p=21668 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:27:19,854 p=21668 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:27:19,882 p=21668 u=vagrant n=ansible | TASK [📦 Télécharger et installer K3s (Master)] *************************************************************************************
+2025-10-26 18:27:21,005 p=21668 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:27:21,029 p=21668 u=vagrant n=ansible | TASK [🧾 Récupérer le token d’enregistrement des workers] ***************************************************************************
+2025-10-26 18:27:21,970 p=21668 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:27:21,994 p=21668 u=vagrant n=ansible | TASK [💾 Sauvegarder le token pour les autres hôtes] ********************************************************************************
+2025-10-26 18:27:22,069 p=21668 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:27:22,092 p=21668 u=vagrant n=ansible | TASK [🌐 Obtenir l’adresse IP du master] ********************************************************************************************
+2025-10-26 18:27:23,189 p=21668 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:27:23,212 p=21668 u=vagrant n=ansible | TASK [💾 Sauvegarder l’adresse IP du master] ****************************************************************************************
+2025-10-26 18:27:23,299 p=21668 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:27:23,323 p=21668 u=vagrant n=ansible | TASK [🔍 Afficher les infos du master] **********************************************************************************************
+2025-10-26 18:27:23,409 p=21668 u=vagrant n=ansible | ok: [control] => {
+    "msg": "Master IP : 10.0.2.15 | Token : K105108c75abd7cafeece843b130bdd52fce49c2f04f0c28b39deec873ddf0239eb::server:b8b86a5d2150f14d2e20316b6e2909a6"
+}
+2025-10-26 18:27:23,466 p=21668 u=vagrant n=ansible | PLAY [🧩 Installation de K3s sur les noeuds Workers] ********************************************************************************
+2025-10-26 18:27:23,483 p=21668 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:27:26,211 p=21668 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 18:27:26,283 p=21668 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 18:27:26,310 p=21668 u=vagrant n=ansible | TASK [🚀 Installer K3s Agent et rejoindre le cluster] *******************************************************************************
+2025-10-26 18:27:35,718 p=21668 u=vagrant n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri
+is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2025-10-26 18:27:35,719 p=21668 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 18:27:35,757 p=21668 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 18:27:35,797 p=21668 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2025-10-26 18:27:35,799 p=21668 u=vagrant n=ansible | control                    : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:27:35,800 p=21668 u=vagrant n=ansible | worker-1                   : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:27:35,801 p=21668 u=vagrant n=ansible | worker-2                   : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:31:18,209 p=22192 u=vagrant n=ansible | PLAY [🚀 Installation de K3s Master sur le noeud Control] ***************************************************************************
+2025-10-26 18:31:18,240 p=22192 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:31:23,674 p=22192 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:31:23,714 p=22192 u=vagrant n=ansible | TASK [📥 Télécharger le script d'installation de K3s] *******************************************************************************
+2025-10-26 18:31:25,835 p=22192 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:31:25,862 p=22192 u=vagrant n=ansible | TASK [⚙️ Installer K3s (Master)] ***************************************************************************************************
+2025-10-26 18:31:27,415 p=22192 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:31:27,433 p=22192 u=vagrant n=ansible | TASK [🧾 Récupérer le token d’enregistrement des workers] ***************************************************************************
+2025-10-26 18:31:28,561 p=22192 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:31:28,583 p=22192 u=vagrant n=ansible | TASK [💾 Sauvegarder le token pour les autres hôtes] ********************************************************************************
+2025-10-26 18:31:28,697 p=22192 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:31:28,718 p=22192 u=vagrant n=ansible | TASK [💾 Sauvegarder l’adresse IP du master] ****************************************************************************************
+2025-10-26 18:31:28,816 p=22192 u=vagrant n=ansible | ok: [control]
+2025-10-26 18:31:28,856 p=22192 u=vagrant n=ansible | TASK [🔍 Afficher les infos du master] **********************************************************************************************
+2025-10-26 18:31:28,953 p=22192 u=vagrant n=ansible | ok: [control] => {
+    "msg": "Master IP : 192.168.56.1 | Token : K105108c75abd7cafeece843b130bdd52fce49c2f04f0c28b39deec873ddf0239eb::server:b8b86a5d2150f14d2e20316b6e2909a6"
+}
+2025-10-26 18:31:28,978 p=22192 u=vagrant n=ansible | TASK [📂 Configurer kubectl pour l'utilisateur vagrant] *****************************************************************************
+2025-10-26 18:31:30,132 p=22192 u=vagrant n=ansible | changed: [control]
+2025-10-26 18:31:30,180 p=22192 u=vagrant n=ansible | PLAY [🧩 Installation de K3s sur les noeuds Workers] ********************************************************************************
+2025-10-26 18:31:30,193 p=22192 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:31:34,469 p=22192 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 18:31:34,654 p=22192 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 18:31:34,686 p=22192 u=vagrant n=ansible | TASK [📥 Télécharger le script d'installation de K3s] *******************************************************************************
+2025-10-26 18:31:36,270 p=22192 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 18:31:36,282 p=22192 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 18:31:36,305 p=22192 u=vagrant n=ansible | TASK [🚀 Installer K3s Agent et rejoindre le cluster] *******************************************************************************
+2025-10-26 18:31:57,334 p=22192 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 18:31:58,963 p=22192 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 18:31:59,005 p=22192 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2025-10-26 18:31:59,008 p=22192 u=vagrant n=ansible | control                    : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:31:59,008 p=22192 u=vagrant n=ansible | worker-1                   : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:31:59,010 p=22192 u=vagrant n=ansible | worker-2                   : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:44:08,397 p=23259 u=vagrant n=ansible | PLAY [🧩 Installer Jenkins sur la VM CICD] ******************************************************************************************
+2025-10-26 18:44:08,435 p=23259 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:44:14,915 p=23259 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 18:44:14,948 p=23259 u=vagrant n=ansible | TASK [📦 Mettre à jour les paquets] *************************************************************************************************
+2025-10-26 18:48:37,082 p=23259 u=vagrant n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type string). If this does not look like what you expect, quote
+the entire value to ensure it does not change.
+
+2025-10-26 18:48:37,083 p=23259 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 18:48:37,156 p=23259 u=vagrant n=ansible | TASK [🐳 Installer Docker] **********************************************************************************************************
+2025-10-26 18:48:42,143 p=23259 u=vagrant n=ansible | fatal: [cicd]: FAILED! => {"cache_update_time": 1761504260, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"      install 'docker.io'' failed: E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.\n", "rc": 100, "stderr": "E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.\n", "stderr_lines": ["E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages."], "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nSome packages could not be installed. This may mean that you have\nrequested an impossible situation or if you are using the unstable\ndistribution that some required packages have not yet been created\nor been moved out of Incoming.\nThe following information may help to resolve the situation:\n\nThe following packages have unmet dependencies:\n containerd.io : Conflicts: containerd\n", "stdout_lines": ["Reading package lists...", "Building dependency tree...", "Reading state information...", "Some packages could not be installed. This may mean that you have", "requested an impossible situation or if you are using the unstable", "distribution that some required packages have not yet been created", "or been moved out of Incoming.", "The following information may help to resolve the situation:", "", "The following packages have unmet dependencies:", " containerd.io : Conflicts: containerd"]}
+2025-10-26 18:48:42,147 p=23259 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2025-10-26 18:48:42,148 p=23259 u=vagrant n=ansible | cicd                       : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-26 18:51:07,168 p=23540 u=vagrant n=ansible | PLAY [🧩 Installer Jenkins sur la VM CICD] ******************************************************************************************
+2025-10-26 18:51:07,205 p=23540 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 18:51:12,612 p=23540 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 18:51:12,640 p=23540 u=vagrant n=ansible | TASK [📦 Mettre à jour les paquets] *************************************************************************************************
+2025-10-26 18:51:20,882 p=23540 u=vagrant n=ansible | [WARNING]: The value "True" (type bool) was converted to "'True'" (type string). If this does not look like what you expect, quote
+the entire value to ensure it does not change.
+
+2025-10-26 18:51:20,886 p=23540 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 18:51:20,904 p=23540 u=vagrant n=ansible | TASK [🧰 Ajouter l'utilisateur vagrant au groupe docker] ****************************************************************************
+2025-10-26 18:51:22,380 p=23540 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 18:51:22,400 p=23540 u=vagrant n=ansible | TASK [▶️ Activer et démarrer Docker] ***********************************************************************************************
+2025-10-26 18:51:24,414 p=23540 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 18:51:24,434 p=23540 u=vagrant n=ansible | TASK [🚀 Démarrer Jenkins via Docker] ***********************************************************************************************
+2025-10-26 18:52:39,416 p=23540 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 18:52:39,454 p=23540 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2025-10-26 18:52:39,456 p=23540 u=vagrant n=ansible | cicd                       : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 20:05:34,756 p=27724 u=vagrant n=ansible | PLAY [Installation de Docker sur les machines concernées] **************************************************************************
+2025-10-26 20:05:34,831 p=27724 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 20:05:43,961 p=27724 u=vagrant n=ansible | ok: [monitoring]
+2025-10-26 20:05:44,962 p=27724 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 20:05:44,982 p=27724 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 20:05:48,844 p=27724 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 20:05:49,273 p=27724 u=vagrant n=ansible | ok: [server-1]
+2025-10-26 20:05:52,359 p=27724 u=vagrant n=ansible | ok: [server-2]
+2025-10-26 20:05:52,972 p=27724 u=vagrant n=ansible | ok: [argocd]
+2025-10-26 20:05:53,003 p=27724 u=vagrant n=ansible | TASK [🧱 Mettre à jour les paquets] *************************************************************************************************
+2025-10-26 20:06:08,927 p=27724 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 20:06:32,653 p=27724 u=vagrant n=ansible | changed: [argocd]
+2025-10-26 20:06:33,347 p=27724 u=vagrant n=ansible | changed: [server-1]
+2025-10-26 20:06:38,159 p=27724 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 20:06:40,929 p=27724 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 20:06:41,735 p=27724 u=vagrant n=ansible | changed: [server-2]
+2025-10-26 20:07:01,763 p=27724 u=vagrant n=ansible | changed: [monitoring]
+2025-10-26 20:07:01,792 p=27724 u=vagrant n=ansible | TASK [📦 Installer les dépendances nécessaires] *************************************************************************************
+2025-10-26 20:07:05,923 p=27724 u=vagrant n=ansible | ok: [server-2]
+2025-10-26 20:07:06,462 p=27724 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 20:07:06,658 p=27724 u=vagrant n=ansible | ok: [server-1]
+2025-10-26 20:07:06,752 p=27724 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 20:07:07,063 p=27724 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 20:07:07,152 p=27724 u=vagrant n=ansible | ok: [argocd]
+2025-10-26 20:07:19,036 p=27724 u=vagrant n=ansible | changed: [monitoring]
+2025-10-26 20:07:19,060 p=27724 u=vagrant n=ansible | TASK [🔑 Ajouter la clé GPG officielle de Docker] ***********************************************************************************
+2025-10-26 20:07:21,418 p=27724 u=vagrant n=ansible | ok: [server-2]
+2025-10-26 20:07:21,520 p=27724 u=vagrant n=ansible | ok: [argocd]
+2025-10-26 20:07:21,552 p=27724 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 20:07:21,637 p=27724 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 20:07:21,643 p=27724 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 20:07:21,645 p=27724 u=vagrant n=ansible | ok: [server-1]
+2025-10-26 20:07:21,957 p=27724 u=vagrant n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri
+is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2025-10-26 20:07:21,958 p=27724 u=vagrant n=ansible | changed: [monitoring]
+2025-10-26 20:07:21,974 p=27724 u=vagrant n=ansible | TASK [🧩 Ajouter le dépôt Docker] ***************************************************************************************************
+2025-10-26 20:07:23,578 p=27724 u=vagrant n=ansible | ok: [server-2]
+2025-10-26 20:07:23,675 p=27724 u=vagrant n=ansible | ok: [server-1]
+2025-10-26 20:07:23,837 p=27724 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 20:07:23,939 p=27724 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 20:07:24,164 p=27724 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 20:07:24,381 p=27724 u=vagrant n=ansible | changed: [monitoring]
+2025-10-26 20:07:24,400 p=27724 u=vagrant n=ansible | ok: [argocd]
+2025-10-26 20:07:24,419 p=27724 u=vagrant n=ansible | TASK [🚀 Installer Docker Engine et ses composants] *********************************************************************************
+2025-10-26 20:07:37,123 p=27724 u=vagrant n=ansible | ok: [server-2]
+2025-10-26 20:07:37,161 p=27724 u=vagrant n=ansible | ok: [server-1]
+2025-10-26 20:07:37,529 p=27724 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 20:07:38,046 p=27724 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 20:07:38,181 p=27724 u=vagrant n=ansible | ok: [argocd]
+2025-10-26 20:07:38,452 p=27724 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 20:09:07,529 p=27724 u=vagrant n=ansible | changed: [monitoring]
+2025-10-26 20:09:07,547 p=27724 u=vagrant n=ansible | TASK [🔁 Activer et démarrer Docker] ************************************************************************************************
+2025-10-26 20:09:15,814 p=27724 u=vagrant n=ansible | ok: [monitoring]
+2025-10-26 20:09:17,515 p=27724 u=vagrant n=ansible | ok: [server-1]
+2025-10-26 20:09:18,501 p=27724 u=vagrant n=ansible | ok: [server-2]
+2025-10-26 20:09:19,231 p=27724 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 20:09:19,360 p=27724 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 20:09:19,367 p=27724 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 20:09:19,388 p=27724 u=vagrant n=ansible | ok: [argocd]
+2025-10-26 20:09:19,424 p=27724 u=vagrant n=ansible | TASK [🧍 Ajouter l'utilisateur vagrant au groupe docker] ****************************************************************************
+2025-10-26 20:09:23,183 p=27724 u=vagrant n=ansible | ok: [server-1]
+2025-10-26 20:09:23,316 p=27724 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 20:09:23,369 p=27724 u=vagrant n=ansible | ok: [argocd]
+2025-10-26 20:09:23,553 p=27724 u=vagrant n=ansible | ok: [server-2]
+2025-10-26 20:09:23,593 p=27724 u=vagrant n=ansible | changed: [monitoring]
+2025-10-26 20:09:23,622 p=27724 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 20:09:23,746 p=27724 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 20:09:23,774 p=27724 u=vagrant n=ansible | TASK [🧪 Vérifier l'installation de Docker] *****************************************************************************************
+2025-10-26 20:09:26,746 p=27724 u=vagrant n=ansible | changed: [server-1]
+2025-10-26 20:09:26,942 p=27724 u=vagrant n=ansible | changed: [server-2]
+2025-10-26 20:09:27,400 p=27724 u=vagrant n=ansible | changed: [monitoring]
+2025-10-26 20:09:27,463 p=27724 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 20:09:27,621 p=27724 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 20:09:27,874 p=27724 u=vagrant n=ansible | changed: [argocd]
+2025-10-26 20:09:27,914 p=27724 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 20:09:27,943 p=27724 u=vagrant n=ansible | TASK [✅ Afficher la version de Docker installée] ***********************************************************************************
+2025-10-26 20:09:28,094 p=27724 u=vagrant n=ansible | ok: [server-1] => {
+    "msg": "Version Docker installée sur server-1 : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 20:09:28,204 p=27724 u=vagrant n=ansible | ok: [worker-1] => {
+    "msg": "Version Docker installée sur worker-1 : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 20:09:28,309 p=27724 u=vagrant n=ansible | ok: [server-2] => {
+    "msg": "Version Docker installée sur server-2 : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 20:09:28,363 p=27724 u=vagrant n=ansible | ok: [worker-2] => {
+    "msg": "Version Docker installée sur worker-2 : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 20:09:28,559 p=27724 u=vagrant n=ansible | ok: [cicd] => {
+    "msg": "Version Docker installée sur cicd : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 20:09:28,571 p=27724 u=vagrant n=ansible | ok: [monitoring] => {
+    "msg": "Version Docker installée sur monitoring : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 20:09:28,589 p=27724 u=vagrant n=ansible | ok: [argocd] => {
+    "msg": "Version Docker installée sur argocd : Docker version 28.5.1, build e180ab8"
+}
+2025-10-26 20:09:28,648 p=27724 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2025-10-26 20:09:28,649 p=27724 u=vagrant n=ansible | argocd                     : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 20:09:28,651 p=27724 u=vagrant n=ansible | cicd                       : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 20:09:28,652 p=27724 u=vagrant n=ansible | monitoring                 : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 20:09:28,653 p=27724 u=vagrant n=ansible | server-1                   : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 20:09:28,653 p=27724 u=vagrant n=ansible | server-2                   : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 20:09:28,653 p=27724 u=vagrant n=ansible | worker-1                   : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 20:09:28,654 p=27724 u=vagrant n=ansible | worker-2                   : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 21:11:32,331 p=37294 u=vagrant n=ansible | PLAY [🔗 Join nodes to the K3s cluster] *********************************************************************************************
+2025-10-26 21:11:32,364 p=37294 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************
+2025-10-26 21:11:43,815 p=37294 u=vagrant n=ansible | ok: [worker-2]
+2025-10-26 21:11:44,131 p=37294 u=vagrant n=ansible | ok: [worker-1]
+2025-10-26 21:11:47,750 p=37294 u=vagrant n=ansible | ok: [monitoring]
+2025-10-26 21:11:47,990 p=37294 u=vagrant n=ansible | ok: [cicd]
+2025-10-26 21:11:48,038 p=37294 u=vagrant n=ansible | TASK [🧹 Supprimer toute ancienne installation K3s] *********************************************************************************
+2025-10-26 21:11:56,683 p=37294 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 21:11:58,178 p=37294 u=vagrant n=ansible | changed: [monitoring]
+2025-10-26 21:12:01,442 p=37294 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 21:12:03,382 p=37294 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 21:12:03,415 p=37294 u=vagrant n=ansible | TASK [🚀 Installer K3s agent et rejoindre le cluster] *******************************************************************************
+2025-10-26 21:13:14,295 p=37294 u=vagrant n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or uri
+is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this
+message.
+
+2025-10-26 21:13:14,297 p=37294 u=vagrant n=ansible | changed: [monitoring]
+2025-10-26 21:13:20,662 p=37294 u=vagrant n=ansible | changed: [cicd]
+2025-10-26 21:13:20,956 p=37294 u=vagrant n=ansible | changed: [worker-1]
+2025-10-26 21:13:29,727 p=37294 u=vagrant n=ansible | changed: [worker-2]
+2025-10-26 21:13:29,874 p=37294 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************
+2025-10-26 21:13:29,879 p=37294 u=vagrant n=ansible | cicd                       : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 21:13:29,880 p=37294 u=vagrant n=ansible | monitoring                 : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 21:13:29,880 p=37294 u=vagrant n=ansible | worker-1                   : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-26 21:13:29,880 p=37294 u=vagrant n=ansible | worker-2                   : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-27 00:06:23,016 p=47605 u=vagrant n=ansible | PLAY [🔗 Join nodes to the K3s cluster] ****************************************************************************************
+2025-10-27 00:06:23,054 p=47605 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************
+2025-10-27 00:06:36,567 p=47605 u=vagrant n=ansible | ok: [argocd]
+2025-10-27 00:06:37,891 p=47605 u=vagrant n=ansible | ok: [monitoring]
+2025-10-27 00:06:38,604 p=47605 u=vagrant n=ansible | ok: [worker-2]
+2025-10-27 00:06:39,091 p=47605 u=vagrant n=ansible | ok: [worker-1]
+2025-10-27 00:06:39,796 p=47605 u=vagrant n=ansible | ok: [cicd]
+2025-10-27 00:06:39,832 p=47605 u=vagrant n=ansible | TASK [🧹 Supprimer toute ancienne installation K3s] ****************************************************************************
+2025-10-27 00:06:43,410 p=47605 u=vagrant n=ansible | changed: [argocd]
+2025-10-27 00:06:51,707 p=47605 u=vagrant n=ansible | changed: [worker-2]
+2025-10-27 00:06:54,251 p=47605 u=vagrant n=ansible | changed: [monitoring]
+2025-10-27 00:06:56,131 p=47605 u=vagrant n=ansible | changed: [cicd]
+2025-10-27 00:06:56,208 p=47605 u=vagrant n=ansible | changed: [worker-1]
+2025-10-27 00:06:56,238 p=47605 u=vagrant n=ansible | TASK [🚀 Installer K3s agent et rejoindre le cluster] **************************************************************************
+2025-10-27 00:08:01,710 p=47605 u=vagrant n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or
+uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid
+of this message.
+
+2025-10-27 00:08:01,717 p=47605 u=vagrant n=ansible | changed: [worker-2]
+2025-10-27 00:08:12,316 p=47605 u=vagrant n=ansible | changed: [cicd]
+2025-10-27 00:08:23,934 p=47605 u=vagrant n=ansible | changed: [worker-1]
+2025-10-27 00:08:27,193 p=47605 u=vagrant n=ansible | changed: [monitoring]
+2025-10-27 00:08:34,516 p=47605 u=vagrant n=ansible | changed: [argocd]
+2025-10-27 00:08:34,649 p=47605 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************
+2025-10-27 00:08:34,650 p=47605 u=vagrant n=ansible | argocd                     : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-27 00:08:34,650 p=47605 u=vagrant n=ansible | cicd                       : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-27 00:08:34,650 p=47605 u=vagrant n=ansible | monitoring                 : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-27 00:08:34,650 p=47605 u=vagrant n=ansible | worker-1                   : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-27 00:08:34,650 p=47605 u=vagrant n=ansible | worker-2                   : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-27 00:34:32,138 p=49698 u=vagrant n=ansible | PLAY [🧱 Installation et configuration du serveur NFS] *************************************************************************
+2025-10-27 00:34:32,173 p=49698 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************
+2025-10-27 00:34:44,987 p=49698 u=vagrant n=ansible | ok: [nfs]
+2025-10-27 00:34:45,032 p=49698 u=vagrant n=ansible | TASK [📦 Installer le serveur NFS] *********************************************************************************************
+2025-10-27 00:35:51,076 p=49698 u=vagrant n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-27 00:37:23,710 p=49806 u=vagrant n=ansible | PLAY [🔗 Join nodes to the K3s cluster] ****************************************************************************************
+2025-10-27 00:37:23,739 p=49806 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************
+2025-10-27 00:37:35,001 p=49806 u=vagrant n=ansible | ok: [worker-1]
+2025-10-27 00:37:35,011 p=49806 u=vagrant n=ansible | ok: [worker-2]
+2025-10-27 00:37:35,147 p=49806 u=vagrant n=ansible | ok: [monitoring]
+2025-10-27 00:37:35,337 p=49806 u=vagrant n=ansible | ok: [argocd]
+2025-10-27 00:37:35,668 p=49806 u=vagrant n=ansible | ok: [nfs]
+2025-10-27 00:37:35,723 p=49806 u=vagrant n=ansible | ok: [cicd]
+2025-10-27 00:37:35,799 p=49806 u=vagrant n=ansible | TASK [🔍 Vérifier si K3s est déjà installé et fonctionnel] *********************************************************************
+2025-10-27 00:37:38,364 p=49806 u=vagrant n=ansible | ok: [worker-1]
+2025-10-27 00:37:38,645 p=49806 u=vagrant n=ansible | ok: [worker-2]
+2025-10-27 00:37:38,733 p=49806 u=vagrant n=ansible | ok: [monitoring]
+2025-10-27 00:37:38,748 p=49806 u=vagrant n=ansible | ok: [argocd]
+2025-10-27 00:37:38,924 p=49806 u=vagrant n=ansible | ok: [cicd]
+2025-10-27 00:37:38,925 p=49806 u=vagrant n=ansible | ok: [nfs]
+2025-10-27 00:37:38,954 p=49806 u=vagrant n=ansible | TASK [🧹 Supprimer l'ancienne installation K3s seulement si nécessaire] ********************************************************
+2025-10-27 00:37:39,510 p=49806 u=vagrant n=ansible | skipping: [worker-1]
+2025-10-27 00:37:39,519 p=49806 u=vagrant n=ansible | skipping: [worker-2]
+2025-10-27 00:37:39,522 p=49806 u=vagrant n=ansible | skipping: [monitoring]
+2025-10-27 00:37:39,524 p=49806 u=vagrant n=ansible | skipping: [cicd]
+2025-10-27 00:37:39,551 p=49806 u=vagrant n=ansible | skipping: [argocd]
+2025-10-27 00:37:39,712 p=49806 u=vagrant n=ansible | skipping: [nfs]
+2025-10-27 00:37:39,761 p=49806 u=vagrant n=ansible | TASK [🚀 Installer K3s agent et rejoindre le cluster] **************************************************************************
+2025-10-27 00:37:40,004 p=49806 u=vagrant n=ansible | skipping: [worker-1]
+2025-10-27 00:37:40,118 p=49806 u=vagrant n=ansible | skipping: [worker-2]
+2025-10-27 00:37:40,208 p=49806 u=vagrant n=ansible | skipping: [monitoring]
+2025-10-27 00:37:40,277 p=49806 u=vagrant n=ansible | skipping: [cicd]
+2025-10-27 00:37:40,564 p=49806 u=vagrant n=ansible | skipping: [argocd]
+2025-10-27 00:38:33,359 p=49806 u=vagrant n=ansible | [WARNING]: Consider using the get_url or uri module rather than running 'curl'.  If you need to use command because get_url or
+uri is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid
+of this message.
+
+2025-10-27 00:38:33,363 p=49806 u=vagrant n=ansible | changed: [nfs]
+2025-10-27 00:38:33,451 p=49806 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************
+2025-10-27 00:38:33,452 p=49806 u=vagrant n=ansible | argocd                     : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-10-27 00:38:33,453 p=49806 u=vagrant n=ansible | cicd                       : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-10-27 00:38:33,453 p=49806 u=vagrant n=ansible | monitoring                 : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-10-27 00:38:33,454 p=49806 u=vagrant n=ansible | nfs                        : ok=3    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-10-27 00:38:33,454 p=49806 u=vagrant n=ansible | worker-1                   : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-10-27 00:38:33,455 p=49806 u=vagrant n=ansible | worker-2                   : ok=2    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-10-27 00:42:16,695 p=50220 u=vagrant n=ansible | PLAY [🧱 Installation et configuration du serveur NFS] *************************************************************************
+2025-10-27 00:42:16,738 p=50220 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************
+2025-10-27 00:42:24,886 p=50220 u=vagrant n=ansible | ok: [nfs]
+2025-10-27 00:42:24,935 p=50220 u=vagrant n=ansible | TASK [📦 Installer le serveur NFS] *********************************************************************************************
+2025-10-27 00:44:19,416 p=50220 u=vagrant n=ansible | changed: [nfs]
+2025-10-27 00:44:19,470 p=50220 u=vagrant n=ansible | TASK [📂 Créer le répertoire de partage NFS] ***********************************************************************************
+2025-10-27 00:44:22,077 p=50220 u=vagrant n=ansible | changed: [nfs]
+2025-10-27 00:44:22,105 p=50220 u=vagrant n=ansible | TASK [⚙️ Configurer le partage dans /etc/exports] *****************************************************************************
+2025-10-27 00:44:24,224 p=50220 u=vagrant n=ansible | changed: [nfs]
+2025-10-27 00:44:24,254 p=50220 u=vagrant n=ansible | TASK [🔁 Redémarrer le service NFS] ********************************************************************************************
+2025-10-27 00:44:27,670 p=50220 u=vagrant n=ansible | changed: [nfs]
+2025-10-27 00:44:27,705 p=50220 u=vagrant n=ansible | TASK [🧩 Vérifier les exports actifs] ******************************************************************************************
+2025-10-27 00:44:29,907 p=50220 u=vagrant n=ansible | changed: [nfs]
+2025-10-27 00:44:29,959 p=50220 u=vagrant n=ansible | TASK [📜 Afficher les exports actifs] ******************************************************************************************
+2025-10-27 00:44:30,074 p=50220 u=vagrant n=ansible | ok: [nfs] => {
+    "exports_result.stdout": "/srv/nfs/k3s-volumes\n\t\t<world>(sync,wdelay,hide,no_subtree_check,sec=sys,rw,secure,no_root_squash,no_all_squash)"
+}
+2025-10-27 00:44:30,169 p=50220 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************
+2025-10-27 00:44:30,174 p=50220 u=vagrant n=ansible | nfs                        : ok=7    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
